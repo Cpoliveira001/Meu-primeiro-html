@@ -1,16 +1,82 @@
-<!DOCTYPE HTML>
-<hyml lang-"pt-br">
-  <head>
-    <meta charset="UFT-8"/>
-    <title> Meu site </title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-  <body>
-    <h1> Olá, mundo!</h1>
-    <h2>Bem vindo ao meu site</h2>
-    <p> Esta é minha primeira pagina HTML </p>
-    <p> Sou o Cleber Oliveira</p>
-    <p> Estou em rota de aprendizado para futuro Fullstack Jr.</p>
-    <p>Aqui desenvolvo minhas habilidades de programação.</p>
-    </body>
-  </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleber no Mundo Cyberpunk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* RESET BÁSICO */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #00fff7;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 10px #00fff7, 0 0 20px #ff00c8;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+      text-shadow: 0 0 5px #00fff7;
+    }
+
+    a.botao-cyber {
+      background-color: transparent;
+      border: 2px solid #00fff7;
+      color: #00fff7;
+      padding: 14px 28px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00fff7;
+      transition: 0.3s;
+      letter-spacing: 2px;
+    }
+
+    a.botao-cyber:hover {
+      background-color: #00fff7;
+      color: #121212;
+      box-shadow: 0 0 20px #ff00c8, 0 0 10px #00fff7 inset;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao Mundo Cyberpunk!</h1>
+  <p>
+    Meu nome é Cleber. Sou um aprendiz de desenvolvimento web trilhando meu caminho até o topo — e esse site é o começo da minha revolução digital.
+  </p>
+  <a class="botao-cyber" href="https://www.linkedin.com/in/cpoliveira001" target="_blank">Me siga no LinkedIn</a>
+
+  <footer>
+    © 2025 - Cleber em modo Fullstack Ativado ⚡
+  </footer>
+</body>
+</html>
+
