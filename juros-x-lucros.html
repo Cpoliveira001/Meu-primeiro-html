@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juros x Lucros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container">
+      <h1>Juros x Lucros</h1>
+      <p>Analisando como os lucros das operadoras bancárias se acumulam sobre juros abusivos, revelando a estrutura de lucro em múltiplas camadas.</p>
+      <a href="index.html" class="btn">Voltar ao site</a>
+    </div>
+  </header>
+
+  <!-- Seção de gráficos -->
+  <section id="dashboard">
+    <div class="container">
+      <h2>Visualizações</h2>
+      <p>Gráficos interativos com taxas médias de juros e lucros das operadoras.</p>
+      
+      <!-- Placeholder para gráfico -->
+      <canvas id="graficoJurosLucros"></canvas>
+    </div>
+  </section>
+
+  <!-- Seção de dados e explicações -->
+  <section id="dados">
+    <div class="container">
+      <h2>Dados e Análises</h2>
+      <p>Informações obtidas a partir de dados públicos do Banco Central e relatórios de RI das empresas. Atualizações automáticas via GitHub Actions previstas.</p>
+      
+      <!-- Exemplo de tabela -->
+      <table>
+        <thead>
+          <tr>
+            <th>Empresa</th>
+            <th>Lucro Líquido (R$)</th>
+            <th>Taxa Média do Cartão (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cielo</td>
+            <td>385.600.000</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>Stone</td>
+            <td>200.000.000</td>
+            <td>380</td>
+          </tr>
+          <tr>
+            <td>PagSeguro</td>
+            <td>150.000.000</td>
+            <td>420</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Cleber Oliveira. Dados públicos do Banco Central e RI das empresas.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
