@@ -1,1 +1,41 @@
+import requests
+import json
+from datetime import datetime
+
+# === Configurações ===
+ARQUIVO_SAIDA = "../data/dados.json"
+
+# Séries do Banco Central
+SERIES = {
+    "juros_rotativo": 25462,  # Cartão de crédito rotativo
+    "juros_parcelado": 25463, # Cartão de crédito parcelado
+    "juros_pessoal": 4189     # Crédito pessoal não consignado
+}
+
+def coletar_dados_bcb(codigo):
+    url = f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados?formato=json"
+    resp = requests.get(url)
+    if resp.status_code == 200:
+        return resp.json()
+    else:
+        print(f"Falha ao coletar série {codigo}")
+        return []
+
+def salvar_json(dados, caminho):
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
+    print(f"Arquivo atualizado: {caminho}")
+
+def main():
+    resultado = {"atualizado_em": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "dados": {}}
+
+    for nome, codigo in SERIES.items():
+        print(f"Coletando {nome} ({codigo})...")
+        serie = coletar_dados_bcb(codigo)
+        resultado["dados"][nome] = serie[-10:]  # pega últimos 10 registros
+
+    salvar_json(resultado, ARQUIVO_SAIDA)
+
+if __name__ == "__main__":
+    main()
 
